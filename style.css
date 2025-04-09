@@ -1,45 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
 body {
-  font-family: 'Vazir', Tahoma, sans-serif;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #eef6fb;
+  background-color: #eaf2f8;
   color: #222;
   line-height: 1.7;
+  direction: rtl;
 }
 
 header {
-  background-color: #007acc;
+  background-color: #005a8d;
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
-  border-bottom: 5px solid #005f99;
+  border-bottom: 5px solid #00436a;
 }
 
-.logo {
+header .logo {
   height: 60px;
   margin-bottom: 10px;
 }
 
 main {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
   padding: 20px;
 }
 
-section {
-  background: white;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+details {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-section h2 {
-  color: #007acc;
+summary {
+  cursor: pointer;
+  padding: 16px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #0074b1;
+  color: white;
+  border-bottom: 1px solid #005a8d;
+  transition: background-color 0.3s;
+}
+
+summary:hover {
+  background-color: #005a8d;
+}
+
+details[open] summary {
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+details p, details ul, details li, details a {
+  padding: 10px 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
 }
 
 a {
-  color: #007acc;
+  color: #005a8d;
   text-decoration: none;
   font-weight: bold;
 }
@@ -48,26 +80,24 @@ a:hover {
   text-decoration: underline;
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #007acc;
-  color: white;
-  margin-top: 40px;
-  border-top: 5px solid #005f99;
+.button-link {
+  display: inline-block;
+  background-color: #0074b1;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
+.button-link:hover {
+  background-color: #005a8d;
+}
 
-  .logo {
-    height: 45px;
-  }
-
-  section {
-    padding: 15px;
-  }
+footer {
+  text-align: center;
+  background-color: #005a8d;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
 }
